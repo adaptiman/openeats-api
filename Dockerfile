@@ -16,6 +16,7 @@ RUN chmod +x /startup/prod-entrypoint.sh
 
 RUN mkdir /code
 WORKDIR /code
+ADD base/BaltimoreCyberTrustRoot.crt.pem /code/BaltimoreCyberTrustRoot.crt.pem
 ADD base/requirements.txt /code/requirements.txt
 RUN pip install -r requirements.txt
 ADD . /code/
