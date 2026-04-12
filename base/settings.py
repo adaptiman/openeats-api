@@ -183,8 +183,12 @@ if not DEBUG:
         'rest_framework.renderers.JSONRenderer',
     )
 
+_node_origin = os.environ.get('NODE_URL', 'localhost:8080')
+if '://' not in _node_origin:
+    _node_origin = 'https://' + _node_origin
+
 CORS_ORIGIN_WHITELIST = (
-    os.environ.get('NODE_URL', 'localhost:8080')
+    _node_origin,
 )
 
 # Static and i18n settings
