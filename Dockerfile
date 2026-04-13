@@ -8,6 +8,7 @@ RUN apk update && apk upgrade && \
     mariadb-dev \
     py-mysqldb \
     musl-dev \
+    libwebp-dev \
     libjpeg-turbo-dev \
     zlib-dev
 
